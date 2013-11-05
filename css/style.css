@@ -83,10 +83,11 @@
     border-radius: 0 0 16px 16px;
     display: inline;
     font-size: 20px;
-    left: 90.8%;
+    left: 90.7%;
     padding: 0 10px;
     position: relative;
     top: -1px;
+    cursor:pointer;
 }
 
 .icon {

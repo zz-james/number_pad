@@ -45,3 +45,76 @@
 .icon-github:before {
     content: "\e602";
 }
+
+/**
+ * nav shiz
+ */
+
+
+.panel {
+    background-color:#fa6308;
+    border-radius: 0 0 16px 16px;
+    width: 100%;
+    margin: 0 0 0 5px;
+    padding: 0 0 0 13px;
+}
+
+.panel-button {
+    background-color:#f3fc25; /* default button color */
+    border-radius: 13px;
+    border: #fff 7px solid;
+    box-shadow: 0 0 0 5px #33180F;
+    width:103px;
+    height:80px;
+    text-align: center;
+    display: inline-block;
+    margin: 5px 13px 13px 0; /* a bit specific */
+}
+
+.panel-button-label {
+    font-size:33px;
+    font-family: "Arial Rounded MT",Arial,Helvetica,sans-serif;
+    font-weight:bold;
+    line-height: 188%;
+    vertical-align: super;
+}
+
+.panel-tab {
+    display: inline;
+    position: relative;
+    top: -1px;
+    left: 80%;
+    border-radius: 0 0 12px 12px;
+    font-size:33px;
+    padding: 0 10px;
+}
+
+.icon {
+    font-size: 40px;
+    line-height: 160%;
+    vertical-align: baseline;
+}
+
+.background-orange {
+    background-color:#fa6308;
+}
+
+.background-green {
+    background-color:#228300;
+}
+
+.background-blue {
+    background-color:#0091cb;
+}
+
+.background-red {
+    background-color:#dc330b;
+}
+
+.background-white {
+    background-color: #ffffff;
+}
+
+.background-black {
+    background-color: #000000;
+}

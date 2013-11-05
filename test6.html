@@ -14,70 +14,115 @@
     }
 
     body {
-        margin: 5px;
-    }
-
-    .panel {
-        background-color:#fa6308;
-        border-radius: 0 0 16px 16px;
-        width: 372px;
         margin: 0;
-        padding: 10px 0 0 13px;
-    }
-
-    .panel-button {
-        background-color:#f3fc25;
-        border: #fff 7px solid;
-        border-radius: 13px;
-        box-shadow: 0px 0px 0px 5px #33180F;
-        width:103px;
-        height:80px;
-        text-align: center;
-        display: inline-block;
-        margin: 5px 13px 13px 0px;
-    }
-
-    .panel-button-label {
-        font-size:33px;
-        font-family: "Arial Rounded MT",Arial,Helvetica,sans-serif;
-        font-weight:bold;
-        line-height: 188%;
-        vertical-align: super;
-    }
-
-    .background-green {
-        background-color:#228300;
-    }
-
-    .background-blue {
-        background-color:#0091cb;
-    }
-
-    .background-red {
-        background-color:#dc330b;
-    }
-
-    .icon {
-        display: inline-block;
-        font-size: 40px;
-        line-height: 160%;
-        vertical-align: baseline;
-    }
-
-    body {
         background-color:#6b5651;
     }
 
+    nav {
+        position:relative;
+        top:-190px;
+        width: 100%;
+        margin: 0;
+        padding-right: 12px;
+        z-index: 1;
+    }
+
+    .application {
+        min-width:320px;
+        position:fixed;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+    }
+
+    /* --------------------- scroll bar stuff ---------------------- */
+    .scroll-v {
+        overflow-y:auto;
+    }
+
+    .scroll-h {
+        overflow-y:hidden;
+        overflow-x:auto;
+    }
+
+    /* --------------------- flow stuff ---------------------- */
+    .horizontal-flow-container {
+        overflow:visible;
+        white-space:nowrap;
+        height:100%;
+    }
+
+    /* --------------------- column stuff ------------------------ */
+    .column {
+        height:100%;
+        width:100%;
+        overflow-y:hidden;
+        overflow-x:hidden;
+        display:inline-block;
+        white-space:normal;
+        max-width: 500px;
+        margin-left: -5px;
+    }
+
+    .column-wrapper {
+        height: 100%;
+        margin: 0 3px 0 10px;
+        overflow-y: scroll;
+        padding-left: 0.9375em;
+        padding-right: 0.9375em;
+        background-color: #FFFFFF;
+    }
+
+    .column-wrapper .column-item {
+        width: 100%;
+        padding-left: 0.9375em;
+        padding-right: 0.9375em;
+        margin-bottom: 50px;
+        position: relative;
+    }
 
 
+
+    .column-wrapper .blog-post {
+        background-color: #F8F8F8;
+        padding: 10px;
+    }
+
+
+    .column-wrapper .column-border {
+        border: 1px solid #DDDDDD;
+    }
+
+    header {
+
+        font-size: 45px;
+        padding-left: 5px;
+        margin-top: 10px;
+        /*display: none;*/
+        color: #000;
+    }
+
+    .rounded-wrapper {
+        background-color: #FFFFFF;
+        border-radius: 25px 25px 0 0;
+        margin: 10px 3px 0 10px;
+
+
+        padding-right: 1px;
+        padding-top: 21px;
+    }
 
 </style>
-
+<!--
+<div style="z-index: 1; position: relative; background-color: rgb(250, 99, 8); width: 58px; text-align: center; border-radius: 0px 0px 12px 12px; left: 290px; top: 2px;">Nav</div>
+-->
 
 
 </head>
 <body>
-<div class="panel">
+<nav>
+<div class="panel background-orange">
     <div class="panel-button background-green">
             <span class="icon icon-home"></span>
     </div>
@@ -97,5 +142,96 @@
             <span class="icon icon-close"></span>
     </div>
 </div>
+<div class="panel-tab background-orange">
+    <span class="icon-menu"></span>
+</div>
+</nav>
+
+
+<div class="application scroll-h">
+
+    <div id="page-scroller" class="horizontal-flow-container">
+        <section id="home" class="column"> <a id="home"></a>
+            <header class="rounded-wrapper">
+                Home
+            </header>
+            <div class="column-wrapper">
+                <div class="column-item column-border">
+                    <div class="blog-post">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet euismod bibendum. Mauris vel mattis elit. Quisque fringilla nunc at justo iaculis viverra. Maecenas a pretium augue. Sed eu tortor malesuada, viverra quam nec, aliquet mauris. Aliquam blandit, sapien eget commodo gravida, nibh lectus pulvinar nisi, id laoreet magna lacus pretium mauris. Pellentesque hendrerit justo dictum orci consequat, eget pellentesque leo auctor.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet euismod bibendum. Mauris vel mattis elit. Quisque fringilla nunc at justo iaculis viverra. Maecenas a pretium augue. Sed eu tortor malesuada, viverra quam nec, aliquet mauris. Aliquam blandit, sapien eget commodo gravida, nibh lectus pulvinar nisi, id laoreet magna lacus pretium mauris. Pellentesque hendrerit justo dictum orci consequat, eget pellentesque leo auctor.</p>
+                    </div>
+                </div>
+
+                <div class="column-item column-border">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet euismod bibendum. Mauris vel mattis elit. Quisque fringilla nunc at justo iaculis viverra. Maecenas a pretium augue. Sed eu tortor malesuada, viverra quam nec, aliquet mauris. Aliquam blandit, sapien eget commodo gravida, nibh lectus pulvinar nisi, id laoreet magna lacus pretium mauris. Pellentesque hendrerit justo dictum orci consequat, eget pellentesque leo auctor.</p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="work" class="column"> <a id="work"></a>
+            <header>
+                Work
+            </header>
+            <div class="column-content">
+                <p>2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet euismod bibendum. Mauris vel mattis elit. Quisque fringilla nunc at justo iaculis viverra. Maecenas a pretium augue. Sed eu tortor malesuada, viverra quam nec, aliquet mauris. Aliquam blandit, sapien eget commodo gravida, nibh lectus pulvinar nisi, id laoreet magna lacus pretium mauris. Pellentesque hendrerit justo dictum orci consequat, eget pellentesque leo auctor. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet euismod bibendum. Mauris vel mattis elit. Quisque fringilla nunc at justo iaculis viverra. Maecenas a pretium augue. Sed eu tortor malesuada, viverra quam nec, aliquet mauris. Aliquam blandit, sapien eget commodo gravida, nibh lectus pulvinar nisi, id laoreet magna lacus pretium mauris. Pellentesque hendrerit justo dictum orci consequat, eget pellentesque leo auctor. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet euismod bibendum. Mauris vel mattis elit. Quisque fringilla nunc at justo iaculis viverra. Maecenas a pretium augue. Sed eu tortor malesuada, viverra quam nec, aliquet mauris. Aliquam blandit, sapien eget commodo gravida, nibh lectus pulvinar nisi, id laoreet magna lacus pretium mauris. Pellentesque hendrerit justo dictum orci consequat, eget pellentesque leo auctor. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet euismod bibendum. Mauris vel mattis elit. Quisque fringilla nunc at justo iaculis viverra. Maecenas a pretium augue. Sed eu tortor malesuada, viverra quam nec, aliquet mauris. Aliquam blandit, sapien eget commodo gravida, nibh lectus pulvinar nisi, id laoreet magna lacus pretium mauris. Pellentesque hendrerit justo dictum orci consequat, eget pellentesque leo auctor. </p>
+            </div>
+        </section>
+        <section id="blog" class="column"> <a id="blog"></a>
+            <header>
+                Blog
+            </header>
+            <div class="column-content">
+                <p>3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet euismod bibendum. Mauris vel mattis elit. Quisque fringilla nunc at justo iaculis viverra. Maecenas a pretium augue. Sed eu tortor malesuada, viverra quam nec, aliquet mauris. Aliquam blandit, sapien eget commodo gravida, nibh lectus pulvinar nisi, id laoreet magna lacus pretium mauris. Pellentesque hendrerit justo dictum orci consequat, eget pellentesque leo auctor. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet euismod bibendum. Mauris vel mattis elit. Quisque fringilla nunc at justo iaculis viverra. Maecenas a pretium augue. Sed eu tortor malesuada, viverra quam nec, aliquet mauris. Aliquam blandit, sapien eget commodo gravida, nibh lectus pulvinar nisi, id laoreet magna lacus pretium mauris. Pellentesque hendrerit justo dictum orci consequat, eget pellentesque leo auctor. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet euismod bibendum. Mauris vel mattis elit. Quisque fringilla nunc at justo iaculis viverra. Maecenas a pretium augue. Sed eu tortor malesuada, viverra quam nec, aliquet mauris. Aliquam blandit, sapien eget commodo gravida, nibh lectus pulvinar nisi, id laoreet magna lacus pretium mauris. Pellentesque hendrerit justo dictum orci consequat, eget pellentesque leo auctor. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet euismod bibendum. Mauris vel mattis elit. Quisque fringilla nunc at justo iaculis viverra. Maecenas a pretium augue. Sed eu tortor malesuada, viverra quam nec, aliquet mauris. Aliquam blandit, sapien eget commodo gravida, nibh lectus pulvinar nisi, id laoreet magna lacus pretium mauris. Pellentesque hendrerit justo dictum orci consequat, eget pellentesque leo auctor. </p>
+            </div>
+        </section>
+        <section id="git" class="column"> <a id="git"></a>
+            <header>
+                Git
+            </header>
+            <div class="column-content">
+                <p>4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet euismod bibendum. Mauris vel mattis elit. Quisque fringilla nunc at justo iaculis viverra. Maecenas a pretium augue. Sed eu tortor malesuada, viverra quam nec, aliquet mauris. Aliquam blandit, sapien eget commodo gravida, nibh lectus pulvinar nisi, id laoreet magna lacus pretium mauris. Pellentesque hendrerit justo dictum orci consequat, eget pellentesque leo auctor. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet euismod bibendum. Mauris vel mattis elit. Quisque fringilla nunc at justo iaculis viverra. Maecenas a pretium augue. Sed eu tortor malesuada, viverra quam nec, aliquet mauris. Aliquam blandit, sapien eget commodo gravida, nibh lectus pulvinar nisi, id laoreet magna lacus pretium mauris. Pellentesque hendrerit justo dictum orci consequat, eget pellentesque leo auctor. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet euismod bibendum. Mauris vel mattis elit. Quisque fringilla nunc at justo iaculis viverra. Maecenas a pretium augue. Sed eu tortor malesuada, viverra quam nec, aliquet mauris. Aliquam blandit, sapien eget commodo gravida, nibh lectus pulvinar nisi, id laoreet magna lacus pretium mauris. Pellentesque hendrerit justo dictum orci consequat, eget pellentesque leo auctor. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet euismod bibendum. Mauris vel mattis elit. Quisque fringilla nunc at justo iaculis viverra. Maecenas a pretium augue. Sed eu tortor malesuada, viverra quam nec, aliquet mauris. Aliquam blandit, sapien eget commodo gravida, nibh lectus pulvinar nisi, id laoreet magna lacus pretium mauris. Pellentesque hendrerit justo dictum orci consequat, eget pellentesque leo auctor. </p>
+            </div>
+        </section>
+        <section id="search" class="column"> <a id="search"></a>
+            <header>
+                Search
+            </header>
+            <div class="column-content">
+                <p>5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet euismod bibendum. Mauris vel mattis elit. Quisque fringilla nunc at justo iaculis viverra. Maecenas a pretium augue. Sed eu tortor malesuada, viverra quam nec, aliquet mauris. Aliquam blandit, sapien eget commodo gravida, nibh lectus pulvinar nisi, id laoreet magna lacus pretium mauris. Pellentesque hendrerit justo dictum orci consequat, eget pellentesque leo auctor. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet euismod bibendum. Mauris vel mattis elit. Quisque fringilla nunc at justo iaculis viverra. Maecenas a pretium augue. Sed eu tortor malesuada, viverra quam nec, aliquet mauris. Aliquam blandit, sapien eget commodo gravida, nibh lectus pulvinar nisi, id laoreet magna lacus pretium mauris. Pellentesque hendrerit justo dictum orci consequat, eget pellentesque leo auctor. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet euismod bibendum. Mauris vel mattis elit. Quisque fringilla nunc at justo iaculis viverra. Maecenas a pretium augue. Sed eu tortor malesuada, viverra quam nec, aliquet mauris. Aliquam blandit, sapien eget commodo gravida, nibh lectus pulvinar nisi, id laoreet magna lacus pretium mauris. Pellentesque hendrerit justo dictum orci consequat, eget pellentesque leo auctor. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet euismod bibendum. Mauris vel mattis elit. Quisque fringilla nunc at justo iaculis viverra. Maecenas a pretium augue. Sed eu tortor malesuada, viverra quam nec, aliquet mauris. Aliquam blandit, sapien eget commodo gravida, nibh lectus pulvinar nisi, id laoreet magna lacus pretium mauris. Pellentesque hendrerit justo dictum orci consequat, eget pellentesque leo auctor. </p>
+            </div>
+        </section>
+        <section id="contact" class="column" style="padding-left:40px"> <a id="contact"></a>
+            <header>
+                Contact
+            </header>
+            <div class="column-content">
+                <p>6 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet euismod bibendum. Mauris vel mattis elit. Quisque fringilla nunc at justo iaculis viverra. Maecenas a pretium augue. Sed eu tortor malesuada, viverra quam nec, aliquet mauris. Aliquam blandit, sapien eget commodo gravida, nibh lectus pulvinar nisi, id laoreet magna lacus pretium mauris. Pellentesque hendrerit justo dictum orci consequat, eget pellentesque leo auctor. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet euismod bibendum. Mauris vel mattis elit. Quisque fringilla nunc at justo iaculis viverra. Maecenas a pretium augue. Sed eu tortor malesuada, viverra quam nec, aliquet mauris. Aliquam blandit, sapien eget commodo gravida, nibh lectus pulvinar nisi, id laoreet magna lacus pretium mauris. Pellentesque hendrerit justo dictum orci consequat, eget pellentesque leo auctor. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet euismod bibendum. Mauris vel mattis elit. Quisque fringilla nunc at justo iaculis viverra. Maecenas a pretium augue. Sed eu tortor malesuada, viverra quam nec, aliquet mauris. Aliquam blandit, sapien eget commodo gravida, nibh lectus pulvinar nisi, id laoreet magna lacus pretium mauris. Pellentesque hendrerit justo dictum orci consequat, eget pellentesque leo auctor. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet euismod bibendum. Mauris vel mattis elit. Quisque fringilla nunc at justo iaculis viverra. Maecenas a pretium augue. Sed eu tortor malesuada, viverra quam nec, aliquet mauris. Aliquam blandit, sapien eget commodo gravida, nibh lectus pulvinar nisi, id laoreet magna lacus pretium mauris. Pellentesque hendrerit justo dictum orci consequat, eget pellentesque leo auctor. </p>
+            </div>
+        </section>
+
+        <section class="column">  </section>
+    </div>
+
+</div>
+
+
 </body>
 </html>

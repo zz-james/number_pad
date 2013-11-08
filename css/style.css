@@ -56,7 +56,8 @@
     border-radius: 0 0 0 16px;
     width: 100%;
     margin: 0 0 0 5px;
-    padding: 5px 0 0 13px;
+    padding: 5px 0 0 3.6%;
+    text-align: center;
 }
 
 .panel-button {
@@ -64,18 +65,18 @@
     border-radius: 13px;
     border: #fff 7px solid;
     box-shadow: 0 0 0 5px #33180F;
-    width:103px;
+    width:28.6%;
     height:80px;
     text-align: center;
     display: inline-block;
-    margin: 5px 13px 13px 0; /* a bit specific */
+    margin: 5px 3.5% 13px 0; /* a bit specific */
 }
 
 .panel-button-label {
-    font-size:33px;
+    font-size:8.05vw;
     font-family: "Arial Rounded MT",Arial,Helvetica,sans-serif;
     font-weight:bold;
-    line-height: 188%;
+    line-height: 223%;
     vertical-align: super;
 }
 
@@ -93,7 +94,7 @@
 
 .icon {
     font-size: 40px;
-    line-height: 160%;
+    line-height: 170%;
     vertical-align: baseline;
 }
 
@@ -119,4 +120,18 @@
 
 .background-black {
     background-color: #000000;
+}
+
+@media (min-width: 370px) {
+    .panel-button-label {
+        line-height: 191%;
+        font-size: 33px;
+    }
+}
+
+
+@media (max-width: 339px) {
+    .panel-button-label {
+        line-height: 247%;
+    }
 }
